@@ -1,0 +1,128 @@
+/* Seminario de Estructuras de datos I
+   Conocimientos previos
+   Gabriela Guadalupe Razo Ortega */
+
+   #include<iostream>
+   #include<string>
+   #include<conio.h>
+
+   using namespace std;
+
+      struct discos
+        {
+            int codigo;
+            char artista[40];
+            char album [40];
+            int numCanciones;
+            float precio;
+            int existencias;
+        }g[50];
+
+     void agregar()
+    {
+        int x;
+        cout << " <<< << Agregar >> >>>" << endl << endl;
+        cout << " Escribe el nombre del album: " << endl;
+        cin.getline(g[x].album,40,'\n');
+        cout << " Escribe el nombre del artista : " << endl;
+        cin.getline(g[x].artista,40,'\n');
+        cout << " Codigo: " << endl;
+        cin >> g[x].codigo;
+        cout << " Precio: " << endl;
+        cin >> g[x].precio;
+        cout << " Numero de canciones: " << endl;
+        cin >> g[x].numCanciones;
+        cout << " Existencias: " << endl;
+        cin << g[x].existencias;
+    }
+    void mostrar()
+    {
+       int x;
+       cout << " <<< << Mostrar >> >>>" << endl << endl;
+       cout << " Album: " << g[x].album << endl;
+       cout << " Nombre de artista: " << g[x].artista << endl;
+       cout << " Codigo :" << g[x].codigo << endl;
+       cout << " Numero de canciones: " << g[x].numCanciones << endl;
+       cout << " Existencias: " << g[x].existencias << endl;
+       cout << " Precio: " << g[x].precio << endl;
+
+    }
+     void buscar()
+    {
+        int x,band==0,cod;
+
+        cout << " <<< << Buscar >> >>>" << endl << endl;
+        cout << " Escribe el codigo a buscar: ";
+        cin >> cod;
+
+         b==g[0].codigo;
+        for(x=0;x<3;x++)
+            if( b==g[x].codigo)
+            {
+                band=1;
+                cout << " Album: " << g[x].album << endl;
+                cout << " Nombre de artista: " << g[x].artista << endl;
+                cout << " Codigo :" << g[x].codigo << endl;
+                cout << " Numero de canciones: " << g[x].numCanciones << endl;
+                cout << " Existencias: " << g[x].existencias << endl;
+                cout << " Precio: " << g[x].precio << endl;
+
+            }
+        if(band==0)
+            cout << " No existe..." << endl;
+
+    }
+
+
+
+    int main()
+    {
+
+    int opc;
+    do{
+
+    cout << " \t <<< << Tienda de CDs >> >>> " << endl;
+    cout << " 1.Agregar CD\n 2.Mostrar todos los CDs\n 3.Buscar por codigo\n 4.Modificar\n 5.Realizar una venta\n 6.Salir\n";
+    cout << " Elige una opcion:";
+    cin >> opc;
+
+        switch(opc)
+        {
+            case 1: agregar();
+                break;
+
+            case 2: mostrar();
+                break;
+
+            case 3: buscar();
+                break;
+
+            case 4: modificar();
+                break;
+
+            case 5: venta();
+                 break;
+
+            case 6: cout << " Saliendo... " << endl;
+                    cout << " Realizado por Gabriela " << endl << endl;
+                break;
+
+            default: cout << " Opcion inexistente" << endl << endl;
+
+        }
+    }while(opc!=6);
+
+    getch;
+    return 0;
+    }
+
+    void modificar()
+    {
+        cout << " <<< << Modificar >> >>>" << endl << endl;
+
+
+    }
+    void venta()
+    {
+        cout << " <<< << Realizar venta >> >>>" << endl << endl;
+    }
